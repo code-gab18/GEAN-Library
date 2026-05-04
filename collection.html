@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection — GEAN Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ SEARCH OVERLAY ════════════════════════════════════════ -->
+<div id="searchOverlay" class="search-overlay" role="dialog" aria-label="Search books">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span class="search-ico">⌕</span>
+      <input id="searchInput" type="text" placeholder="Search books, categories…" autocomplete="off" spellcheck="false">
+      <button id="searchCloseBtn" class="search-close-btn" aria-label="Close">✕</button>
+    </div>
+    <p class="search-meta">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</p>
+    <div id="searchResults" role="listbox"></div>
+  </div>
+</div>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-name">GEAN</span>
+    <span class="nav-brand-sub">Library</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collection.html">Collection</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="policies.html">Policies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <button id="navSearchBtn" class="nav-search-btn" aria-label="Search">⌕</button>
+  <button id="navBurger" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<nav id="navDrawer" class="nav-drawer">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="services.html">Services</a>
+  <a href="policies.html">Policies</a>
+  <a href="about.html">About</a>
+</nav>
+
+<!-- ══ PAGE HERO ═════════════════════════════════════════════ -->
+<header class="page-hero" style="padding-top:70px">
+  <div class="ph-grid"></div>
+  <div class="ph-glow"></div>
+  <div class="ph-inner">
+    <p class="ph-tag">GEAN Library</p>
+    <h1 class="ph-title">Our <em>Collection</em></h1>
+    <p class="ph-sub">Browse 20+ curated titles across Fiction, History, Science, Technology, and Reference.</p>
+  </div>
+</header>
+
+<!-- ══ CATEGORY NAV ══════════════════════════════════════════ -->
+<div class="col-nav" role="navigation" aria-label="Category navigation">
+  <div class="col-nav-inner">
+    <button class="col-btn active" data-target="fiction">📖 Fiction</button>
+    <button class="col-btn"        data-target="history">🏛️ History</button>
+    <button class="col-btn"        data-target="science">🔬 Science</button>
+    <button class="col-btn"        data-target="technology">💻 Technology</button>
+    <button class="col-btn"        data-target="reference">📚 Reference</button>
+  </div>
+</div>
+
+<!-- ══ FICTION ════════════════════════════════════════════════ -->
+<section class="book-sec" id="fiction" aria-labelledby="fiction-heading">
+  <div class="wrap">
+    <div class="bsec-hdr">
+      <div class="bsec-left">
+        <span class="cat-pill">📖 Fiction</span>
+        <h2 id="fiction-heading">Fiction</h2>
+        <p>Imaginative stories that transport you to new worlds and extraordinary lives.</p>
+      </div>
+    </div>
+    <div class="book-grid-4">
+
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1a2535,#0f1822)">
+            <div class="bcf-spine" style="background:#6e8efb"></div>
+            <span class="bcf-label">The Da Vinci Code</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Da Vinci Code</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1e2a1a,#111e0e)">
+            <div class="bcf-spine" style="background:#4ecdc4"></div>
+            <span class="bcf-label">The Book Thief</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Book Thief</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#251a10,#180e08)">
+            <div class="bcf-spine" style="background:#e17055"></div>
+            <span class="bcf-label">The Grey Wolf</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Grey Wolf</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1e1a28,#131020)">
+            <div class="bcf-spine" style="background:#fd79a8"></div>
+            <span class="bcf-label">Everyday</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Everyday</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ HISTORY ════════════════════════════════════════════════ -->
+<section class="book-sec" id="history" aria-labelledby="history-heading">
+  <div class="wrap">
+    <div class="bsec-hdr">
+      <div class="bsec-left">
+        <span class="cat-pill">🏛️ History</span>
+        <h2 id="history-heading">History</h2>
+        <p>Chronicle the past — civilisations, empires, and the events that shaped the modern world.</p>
+      </div>
+    </div>
+    <div class="book-grid-4">
+
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#2a1e0a,#1c1206)">
+            <div class="bcf-spine" style="background:#f6a74b"></div>
+            <span class="bcf-label">History of the Ancient World</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The History of the Ancient World</p>
+          <p class="book-cat">History</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#201820,#160f15)">
+            <div class="bcf-spine" style="background:#a29bfe"></div>
+            <span class="bcf-label">Year Civilization Collapsed</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Year Civilization Collapsed</p>
+          <p class="book-cat">History</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#0e1e28,#081420)">
+            <div class="bcf-spine" style="background:#74b9ff"></div>
+            <span class="bcf-label">London: A Fourteenth-Century City</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">London: A Fourteenth-Century City</p>
+          <p class="book-cat">History</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#20100e,#160908)">
+            <div class="bcf-spine" style="background:#e17055"></div>
+            <span class="bcf-label">The Fall of Roman Britain</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Fall of Roman Britain</p>
+          <p class="book-cat">History</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCIENCE ════════════════════════════════════════════════ -->
+<section class="book-sec" id="science" aria-labelledby="science-heading">
+  <div class="wrap">
+    <div class="bsec-hdr">
+      <div class="bsec-left">
+        <span class="cat-pill">🔬 Science</span>
+        <h2 id="science-heading">Science</h2>
+        <p>Explore discoveries, theories, and the ever-expanding frontiers of human knowledge.</p>
+      </div>
+    </div>
+    <div class="book-grid-4">
+
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#0a2020,#061515)">
+            <div class="bcf-spine" style="background:#00b894"></div>
+            <span class="bcf-label">Rehab Science</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Rehab Science</p>
+          <p class="book-cat">Science</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#101828,#080e1c)">
+            <div class="bcf-spine" style="background:#4ecdc4"></div>
+            <span class="bcf-label">The Science of Interstellar</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Science of Interstellar</p>
+          <p class="book-cat">Science</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#181028,#100820)">
+            <div class="bcf-spine" style="background:#a29bfe"></div>
+            <span class="bcf-label">The Thousand Earths</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Thousand Earths</p>
+          <p class="book-cat">Science</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#0e1a20,#08121a)">
+            <div class="bcf-spine" style="background:#74b9ff"></div>
+            <span class="bcf-label">Artifact Space</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Artifact Space</p>
+          <p class="book-cat">Science</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TECHNOLOGY ════════════════════════════════════════════ -->
+<section class="book-sec" id="technology" aria-labelledby="tech-heading">
+  <div class="wrap">
+    <div class="bsec-hdr">
+      <div class="bsec-left">
+        <span class="cat-pill">💻 Technology</span>
+        <h2 id="tech-heading">Technology</h2>
+        <p>Practical and visionary books on innovation, digital culture, and the tools shaping our world.</p>
+      </div>
+    </div>
+    <div class="book-grid-4">
+
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#18101e,#100a18)">
+            <div class="bcf-spine" style="background:#a29bfe"></div>
+            <span class="bcf-label">Beyond Everywhere</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Beyond Everywhere</p>
+          <p class="book-cat">Technology</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#0e0e1a,#080810)">
+            <div class="bcf-spine" style="background:#6e8efb"></div>
+            <span class="bcf-label">Cybercrime and the Darknet</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Cybercrime and the Darknet</p>
+          <p class="book-cat">Technology</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#101e1a,#081412)">
+            <div class="bcf-spine" style="background:#00b894"></div>
+            <span class="bcf-label">The Change Function</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Change Function</p>
+          <p class="book-cat">Technology</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1e1610,#160e08)">
+            <div class="bcf-spine" style="background:#f6a74b"></div>
+            <span class="bcf-label">The Technology Trap</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Technology Trap</p>
+          <p class="book-cat">Technology</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ REFERENCE ══════════════════════════════════════════════ -->
+<section class="book-sec" id="reference" aria-labelledby="ref-heading">
+  <div class="wrap">
+    <div class="bsec-hdr">
+      <div class="bsec-left">
+        <span class="cat-pill">📚 Reference</span>
+        <h2 id="ref-heading">Reference</h2>
+        <p>Authoritative works consulted for specific knowledge rather than read cover to cover.</p>
+      </div>
+    </div>
+    <div class="book-grid-4">
+
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#261c0a,#1a1206)">
+            <div class="bcf-spine" style="background:#c89040"></div>
+            <span class="bcf-label">Roget's International Thesaurus</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Roget's International Thesaurus</p>
+          <p class="book-cat">Reference</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#0e1e10,#08140a)">
+            <div class="bcf-spine" style="background:#55efc4"></div>
+            <span class="bcf-label">Handbook of Mathematical Functions</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Handbook of Mathematical Functions</p>
+          <p class="book-cat">Reference</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#201a10,#140e06)">
+            <div class="bcf-spine" style="background:#dba954"></div>
+            <span class="bcf-label">The Merck Manual</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Merck Manual</p>
+          <p class="book-cat">Reference</p>
+        </div>
+      </article>
+
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1e1010,#140808)">
+            <div class="bcf-spine" style="background:#e17055"></div>
+            <span class="bcf-label">Africana</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay"><button class="btn-add">+ Add to Collection</button></div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Africana</p>
+          <p class="book-cat">Reference</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <span class="ft-brand">GEAN Library</span>
+  <span class="ft-copy">&copy; 2024 GEAN Library. All rights reserved.</span>
+  <nav class="ft-links">
+    <a href="collection.html">Collection</a>
+    <a href="services.html">Services</a>
+    <a href="policies.html">Policies</a>
+    <a href="about.html">About</a>
+  </nav>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

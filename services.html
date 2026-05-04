@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — GEAN Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ SEARCH OVERLAY ════════════════════════════════════════ -->
+<div id="searchOverlay" class="search-overlay" role="dialog">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span class="search-ico">⌕</span>
+      <input id="searchInput" type="text" placeholder="Search books, categories…" autocomplete="off" spellcheck="false">
+      <button id="searchCloseBtn" class="search-close-btn">✕</button>
+    </div>
+    <p class="search-meta">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</p>
+    <div id="searchResults" role="listbox"></div>
+  </div>
+</div>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-name">GEAN</span>
+    <span class="nav-brand-sub">Library</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collection.html">Collection</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="policies.html">Policies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <button id="navSearchBtn" class="nav-search-btn">⌕</button>
+  <button id="navBurger" class="nav-burger"><span></span><span></span><span></span></button>
+</nav>
+<nav id="navDrawer" class="nav-drawer">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="services.html">Services</a>
+  <a href="policies.html">Policies</a>
+  <a href="about.html">About</a>
+</nav>
+
+<!-- ══ PAGE HERO ═════════════════════════════════════════════ -->
+<header class="page-hero" style="padding-top:70px">
+  <div class="ph-grid"></div>
+  <div class="ph-glow"></div>
+  <div class="ph-inner">
+    <p class="ph-tag">GEAN Library</p>
+    <h1 class="ph-title">Library <em>Services</em></h1>
+    <p class="ph-sub">We are committed to providing open-access facilities that bridge the gap between you and the knowledge you seek.</p>
+  </div>
+</header>
+
+<!-- ══ SERVICES GRID ═════════════════════════════════════════ -->
+<section class="sec" style="background:var(--navy)" aria-labelledby="svc-heading">
+  <div class="wrap">
+    <header class="center" style="margin-bottom:52px">
+      <p class="sec-tag">What We Offer</p>
+      <h2 class="sec-title" id="svc-heading">How We <em>Support You</em></h2>
+      <p class="sec-desc">Comprehensive services designed for every stage of your information journey.</p>
+    </header>
+
+    <div class="svc-grid">
+
+      <div class="svc-card reveal d1" data-n="01">
+        <span class="svc-ico">🎓</span>
+        <h3 class="svc-title">User Orientation</h3>
+        <p class="svc-desc">It's important for the clientele to know the rules of the library and how to act as an information literate. Our library provides each user with knowledge about library ethics and guides them in their use of our facilities, ensuring every visit is productive and respectful.</p>
+        <button class="btn-learn">Learn more →</button>
+      </div>
+
+      <div class="svc-card reveal d2" data-n="02">
+        <span class="svc-ico">🔄</span>
+        <h3 class="svc-title">Circulation Services</h3>
+        <p class="svc-desc">We track every item that comes in and out of the library. It is our duty to ensure the collection remains complete and well-maintained. When you borrow an item, our circulation desk handles the process seamlessly from check-out to return.</p>
+        <button class="btn-learn">Learn more →</button>
+      </div>
+
+      <div class="svc-card reveal d3" data-n="03">
+        <span class="svc-ico">🔍</span>
+        <h3 class="svc-title">Reference Service</h3>
+        <p class="svc-desc">If you're in need of assistance finding the right book or resource, our reference service is perfect for you. With a librarian's expert assistance, the clientele will surely know where to look or seek the information they need.</p>
+        <button class="btn-learn">Learn more →</button>
+      </div>
+
+      <div class="svc-card reveal d1" data-n="04">
+        <span class="svc-ico">🌐</span>
+        <h3 class="svc-title">Online Resource Services</h3>
+        <p class="svc-desc">GEAN Library opens all of its online resources for the convenience of users. Making it more accessible and time-efficient. Through our online resources platform, users gain access to a vast array of digital databases, e-books, and academic journals in a single click.</p>
+        <button class="btn-learn">Learn more →</button>
+      </div>
+
+      <div class="svc-card reveal d2" data-n="05">
+        <span class="svc-ico">🤝</span>
+        <h3 class="svc-title">Community Activities</h3>
+        <p class="svc-desc">To help more users and clientele, community activities are regularly held. These events let a wider variety of people learn about the importance of the library. Through community activities, people become more connected to the information the library has to offer.</p>
+        <button class="btn-learn">Learn more →</button>
+      </div>
+
+      <!-- CTA card -->
+      <div class="svc-card reveal d3"
+           style="background:linear-gradient(135deg,rgba(200,144,64,.13),rgba(200,144,64,.04));border-color:rgba(200,144,64,.28);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;">
+        <span style="font-size:2.2rem">✨</span>
+        <p style="font-family:var(--font-d);font-size:1.2rem;color:var(--text-1);line-height:1.4">
+          Ready to get the most from the library?
+        </p>
+        <a href="about.html" class="btn-gold">Get Registered →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TABLE OF CONTENTS ══════════════════════════════════════ -->
+<section class="toc-sec sec" style="background:var(--navy-mid)">
+  <div class="wrap">
+    <h2 class="sec-title reveal" style="margin-bottom:28px">Explore <em>Further</em></h2>
+    <div class="toc-links reveal d1">
+      <a href="#" class="toc-lnk">Services Available at the Main Library</a>
+      <a href="#" class="toc-lnk">Reference and Information Services</a>
+      <a href="#" class="toc-lnk">Circulation and User Services</a>
+      <a href="#" class="toc-lnk">Multimedia Services</a>
+      <a href="#" class="toc-lnk">Archives Services</a>
+      <a href="#" class="toc-lnk">Cataloging Services</a>
+      <a href="#" class="toc-lnk">New Acquisitions</a>
+      <a href="#" class="toc-lnk">Research Guides</a>
+      <a href="#" class="toc-lnk">Library Publications</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REGISTER CTA ══════════════════════════════════════════ -->
+<section class="register-sec">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="sec-tag center" style="justify-content:center">Join Us Today</p>
+    <h2 class="reveal">Ready to <em>Get Started?</em></h2>
+    <p class="reveal d1">Register now to unlock a vast array of library resources — books, e-books, research tools, workshops, and personalised services to support your learning and research.</p>
+    <a href="about.html" class="btn-gold reveal d2">Register Now →</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <span class="ft-brand">GEAN Library</span>
+  <span class="ft-copy">&copy; 2024 GEAN Library. All rights reserved.</span>
+  <nav class="ft-links">
+    <a href="collection.html">Collection</a>
+    <a href="services.html">Services</a>
+    <a href="policies.html">Policies</a>
+    <a href="about.html">About</a>
+  </nav>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

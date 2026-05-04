@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEAN Library — Explore Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ SEARCH OVERLAY ════════════════════════════════════════ -->
+<div id="searchOverlay" class="search-overlay" role="dialog" aria-label="Search books">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span class="search-ico">⌕</span>
+      <input id="searchInput" type="text" placeholder="Search books, categories…" autocomplete="off" spellcheck="false">
+      <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search">✕</button>
+    </div>
+    <p class="search-meta">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</p>
+    <div id="searchResults" role="listbox" aria-label="Search results"></div>
+  </div>
+</div>
+
+<!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand" aria-label="GEAN Library home">
+    <span class="nav-brand-name">GEAN</span>
+    <span class="nav-brand-sub">Library</span>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collection.html">Collection</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="policies.html">Policies</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+
+  <button id="navSearchBtn" class="nav-search-btn" aria-label="Open search">⌕</button>
+  <button id="navBurger" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="services.html">Services</a>
+  <a href="policies.html">Policies</a>
+  <a href="about.html">About</a>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<section class="hero" id="home" aria-label="Hero section">
+  <div class="hero-grid"></div>
+  <div class="hero-radial"></div>
+  <div class="hero-radial-2"></div>
+
+  <div class="hero-inner">
+    <!-- Left: Text -->
+    <div class="hero-left">
+      <p class="hero-eyebrow">Welcome to GEAN Library</p>
+
+      <h1 class="hero-title">
+        Unlock the World<br>
+        of <em>Knowledge</em>
+        <strong>& Discovery</strong>
+      </h1>
+
+      <p class="hero-desc">
+        Explore thousands of books, journals, and curated resources
+        across every discipline — all at your fingertips.
+      </p>
+
+      <div class="hero-btns">
+        <a href="collection.html" class="btn-gold">Browse Collection &rarr;</a>
+        <a href="services.html"   class="btn-ghost">Our Services</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-count="5000" data-suffix="+">0</div>
+          <div class="stat-label">Books Available</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="5" data-suffix="">0</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="24" data-suffix="/7">0</div>
+          <div class="stat-label">Online Access</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Floating cards -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-wrap">
+        <div class="hv-glow"></div>
+        <div class="hv-card">
+          <div class="hv-inner">
+            <span class="hv-icon">📖</span>
+            <div class="hv-lines"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="hv-card">
+          <div class="hv-inner">
+            <span class="hv-icon">🏛️</span>
+            <div class="hv-lines"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="hv-card">
+          <div class="hv-inner">
+            <span class="hv-icon">🔬</span>
+            <div class="hv-lines"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ════════════════════════════════════════════════ -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-track">
+    <!-- Duplicated for seamless loop -->
+    <span class="mq-item"><span class="mq-dot"></span>Fiction</span>
+    <span class="mq-item"><span class="mq-dot"></span>History</span>
+    <span class="mq-item"><span class="mq-dot"></span>Science</span>
+    <span class="mq-item"><span class="mq-dot"></span>Technology</span>
+    <span class="mq-item"><span class="mq-dot"></span>Reference</span>
+    <span class="mq-item"><span class="mq-dot"></span>Online Resources</span>
+    <span class="mq-item"><span class="mq-dot"></span>Community Events</span>
+    <span class="mq-item"><span class="mq-dot"></span>User Orientation</span>
+    <span class="mq-item"><span class="mq-dot"></span>Circulation Services</span>
+    <span class="mq-item"><span class="mq-dot"></span>Fiction</span>
+    <span class="mq-item"><span class="mq-dot"></span>History</span>
+    <span class="mq-item"><span class="mq-dot"></span>Science</span>
+    <span class="mq-item"><span class="mq-dot"></span>Technology</span>
+    <span class="mq-item"><span class="mq-dot"></span>Reference</span>
+    <span class="mq-item"><span class="mq-dot"></span>Online Resources</span>
+    <span class="mq-item"><span class="mq-dot"></span>Community Events</span>
+    <span class="mq-item"><span class="mq-dot"></span>User Orientation</span>
+    <span class="mq-item"><span class="mq-dot"></span>Circulation Services</span>
+  </div>
+</div>
+
+<!-- ══ CATEGORIES ════════════════════════════════════════════ -->
+<section class="cat-section sec" aria-labelledby="cat-heading">
+  <div class="wrap">
+    <header class="sec-header center" style="margin-bottom:48px">
+      <p class="sec-tag">Browse by Category</p>
+      <h2 class="sec-title" id="cat-heading">Featured <em>Collections</em></h2>
+      <p class="sec-desc">Curated shelves spanning every discipline — fiction to cutting-edge technology.</p>
+    </header>
+
+    <div class="cat-grid">
+      <a href="collection.html#fiction"    class="cat-card reveal d1">
+        <span class="cat-icon">📖</span>
+        <span class="cat-name">Fiction</span>
+        <span class="cat-count">4 titles</span>
+      </a>
+      <a href="collection.html#history"    class="cat-card reveal d2">
+        <span class="cat-icon">🏛️</span>
+        <span class="cat-name">History</span>
+        <span class="cat-count">4 titles</span>
+      </a>
+      <a href="collection.html#science"    class="cat-card reveal d3">
+        <span class="cat-icon">🔬</span>
+        <span class="cat-name">Science</span>
+        <span class="cat-count">4 titles</span>
+      </a>
+      <a href="collection.html#technology" class="cat-card reveal d4">
+        <span class="cat-icon">💻</span>
+        <span class="cat-name">Technology</span>
+        <span class="cat-count">4 titles</span>
+      </a>
+      <a href="collection.html#reference"  class="cat-card reveal d5">
+        <span class="cat-icon">📚</span>
+        <span class="cat-name">Reference</span>
+        <span class="cat-count">4 titles</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURED BOOKS ═════════════════════════════════════════ -->
+<section class="books-section sec" aria-labelledby="books-heading">
+  <div class="wrap">
+    <div class="books-hdr">
+      <div>
+        <p class="sec-tag">Hand-picked for You</p>
+        <h2 class="sec-title" id="books-heading">Featured <em>Books</em></h2>
+      </div>
+      <a href="collection.html" class="btn-ghost">View All &rarr;</a>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- Book 1 -->
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1a2535,#0f1822)">
+            <div class="bcf-spine" style="background:#6e8efb"></div>
+            <span class="bcf-label">The Da Vinci Code</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Da Vinci Code</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+      <!-- Book 2 -->
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1e2a1a,#111e0e)">
+            <div class="bcf-spine" style="background:#4ecdc4"></div>
+            <span class="bcf-label">The Book Thief</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Book Thief</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+      <!-- Book 3 -->
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#251a10,#1a1008)">
+            <div class="bcf-spine" style="background:#f6a74b"></div>
+            <span class="bcf-label">History of the Ancient World</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">History of the Ancient World</p>
+          <p class="book-cat">History</p>
+        </div>
+      </article>
+
+      <!-- Book 4 -->
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1a1630,#100e20)">
+            <div class="bcf-spine" style="background:#a29bfe"></div>
+            <span class="bcf-label">Cybercrime &amp; the Darknet</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Cybercrime and the Darknet</p>
+          <p class="book-cat">Technology</p>
+        </div>
+      </article>
+
+      <!-- Book 5 -->
+      <article class="book-card reveal d1">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#0e2020,#081818)">
+            <div class="bcf-spine" style="background:#4ecdc4"></div>
+            <span class="bcf-label">The Science of Interstellar</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Science of Interstellar</p>
+          <p class="book-cat">Science</p>
+        </div>
+      </article>
+
+      <!-- Book 6 -->
+      <article class="book-card reveal d2">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#261a10,#180f06)">
+            <div class="bcf-spine" style="background:#c89040"></div>
+            <span class="bcf-label">Roget's International Thesaurus</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Roget's International Thesaurus</p>
+          <p class="book-cat">Reference</p>
+        </div>
+      </article>
+
+      <!-- Book 7 -->
+      <article class="book-card reveal d3">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#1e1a28,#131020)">
+            <div class="bcf-spine" style="background:#6e8efb"></div>
+            <span class="bcf-label">Everyday</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">Everyday</p>
+          <p class="book-cat">Fiction</p>
+        </div>
+      </article>
+
+      <!-- Book 8 -->
+      <article class="book-card reveal d4">
+        <div class="book-cover">
+          <div class="book-cover-fake" style="background:linear-gradient(140deg,#20180e,#140f06)">
+            <div class="bcf-spine" style="background:#f6a74b"></div>
+            <span class="bcf-label">The Fall of Roman Britain</span>
+            <div class="bcf-lines"><span></span><span></span><span></span></div>
+          </div>
+          <div class="book-overlay">
+            <button class="btn-add">+ Add to Collection</button>
+          </div>
+        </div>
+        <div class="book-body">
+          <p class="book-title">The Fall of Roman Britain</p>
+          <p class="book-cat">History</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY STRIP ═════════════════════════════════════════ -->
+<div class="gallery-strip" aria-label="Library photo gallery" role="img">
+  <!-- Replace src with real images from your /images folder -->
+  <img src="images/gal1.jpg" alt="Library interior" loading="lazy">
+  <img src="images/gal2.jpg" alt="Reading room"     loading="lazy">
+  <img src="images/gal3.jpg" alt="Bookshelves"      loading="lazy">
+  <img src="images/gal4.jpg" alt="Study area"       loading="lazy">
+</div>
+
+<!-- ══ SERVICES PREVIEW ══════════════════════════════════════ -->
+<section class="services-prev sec" aria-labelledby="srv-heading">
+  <div class="wrap">
+    <header class="sec-header center" style="margin-bottom:48px">
+      <p class="sec-tag">What We Offer</p>
+      <h2 class="sec-title" id="srv-heading">Our <em>Services</em></h2>
+      <p class="sec-desc">Comprehensive support for every stage of your learning and research journey.</p>
+    </header>
+
+    <div class="srv-grid">
+      <div class="srv-card reveal d1">
+        <div class="srv-icon">🎓</div>
+        <h3 class="srv-title">User Orientation</h3>
+        <p class="srv-desc">Guides every new user through library ethics, resources, and best practices for information literacy.</p>
+        <a href="services.html" class="srv-arrow">Learn more →</a>
+      </div>
+      <div class="srv-card reveal d2">
+        <div class="srv-icon">🔄</div>
+        <h3 class="srv-title">Circulation Services</h3>
+        <p class="srv-desc">Seamless borrowing and return system that keeps our entire collection organised and available.</p>
+        <a href="services.html" class="srv-arrow">Learn more →</a>
+      </div>
+      <div class="srv-card reveal d3">
+        <div class="srv-icon">🔍</div>
+        <h3 class="srv-title">Reference Service</h3>
+        <p class="srv-desc">Librarian-assisted research to help you locate exactly the right resource for your needs.</p>
+        <a href="services.html" class="srv-arrow">Learn more →</a>
+      </div>
+      <div class="srv-card reveal d1">
+        <div class="srv-icon">🌐</div>
+        <h3 class="srv-title">Online Resource Services</h3>
+        <p class="srv-desc">Instant access to a rich ecosystem of digital databases, e-books, and academic materials.</p>
+        <a href="services.html" class="srv-arrow">Learn more →</a>
+      </div>
+      <div class="srv-card reveal d2">
+        <div class="srv-icon">🤝</div>
+        <h3 class="srv-title">Community Activities</h3>
+        <p class="srv-desc">Workshops, exhibits, and outreach events designed to connect the community with knowledge.</p>
+        <a href="services.html" class="srv-arrow">Learn more →</a>
+      </div>
+      <div class="srv-card reveal d3"
+           style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:linear-gradient(135deg,rgba(200,144,64,.12),rgba(200,144,64,.04));border-color:rgba(200,144,64,.25);">
+        <p style="font-family:var(--font-d);font-size:1.15rem;color:var(--text-1);text-align:center;line-height:1.5">
+          Ready to explore all services?
+        </p>
+        <a href="services.html" class="btn-gold">View All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEWSLETTER ════════════════════════════════════════════ -->
+<section class="nl-section" aria-labelledby="nl-heading">
+  <div class="nl-inner">
+    <div class="nl-left reveal">
+      <p class="sec-tag">Stay Connected</p>
+      <h2 id="nl-heading">Stay <em>Updated</em></h2>
+      <p>Subscribe to our newsletter for the latest book recommendations, upcoming events, and library news.</p>
+
+      <div class="nl-contacts">
+        <h4>Reference Librarian</h4>
+        <div class="nl-ci"><span>📍</span> Malolos, Bulacan (Temporary)</div>
+        <div class="nl-ci"><span>✉️</span> library@gean.edu.ph</div>
+        <div class="nl-ci"><span>📞</span> +63 939 268 4465</div>
+        <div class="nl-ci"><span>📞</span> +63 994 260 5983</div>
+        <div class="nl-ci"><span>📞</span> +63 970 738 0564</div>
+        <div class="nl-ci"><span>📞</span> +63 916 695 5772</div>
+      </div>
+    </div>
+
+    <div class="nl-right reveal d2">
+      <h3>Subscribe to our Newsletter</h3>
+      <p>Get curated book picks and event announcements straight to your inbox.</p>
+      <form class="nl-form" onsubmit="return false;">
+        <input class="nl-input" type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn-gold">Subscribe &rarr;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <span class="ft-brand">GEAN Library</span>
+  <span class="ft-copy">&copy; 2024 GEAN Library. All rights reserved.</span>
+  <nav class="ft-links" aria-label="Footer navigation">
+    <a href="collection.html">Collection</a>
+    <a href="services.html">Services</a>
+    <a href="policies.html">Policies</a>
+    <a href="about.html">About</a>
+  </nav>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
