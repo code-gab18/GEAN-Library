@@ -8,32 +8,48 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-brand">
+<!-- ══ SEARCH OVERLAY ════════════════════════════════════════ -->
+<div id="searchOverlay" class="search-overlay" role="dialog" aria-label="Search books">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span class="search-ico">⌕</span>
+      <input id="searchInput" type="text" placeholder="Search books, categories…" autocomplete="off" spellcheck="false">
+      <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search">✕</button>
+    </div>
+    <p class="search-meta">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</p>
+    <div id="searchResults" role="listbox" aria-label="Search results"></div>
+  </div>
+</div>
+
+<!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand" aria-label="GEAN Library home">
     <span class="nav-brand-name">GEAN</span>
     <span class="nav-brand-sub">Library</span>
   </a>
 
-  <ul class="nav-links">
+  <ul class="nav-links" role="list">
     <li><a href="index.html">Home</a></li>
     <li><a href="collection.html">Collection</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="policies.html">Policies</a></li>
-    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="about.html">About</a></li>
   </ul>
+
+  <button id="navSearchBtn" class="nav-search-btn" aria-label="Open search">⌕</button>
+  <button id="navBurger" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- HERO -->
-<section class="page-hero">
-  <div class="ph-inner">
-    <p class="ph-tag">Who We Are</p>
-    <h1 class="ph-title">About <em>GEAN Library</em></h1>
-    <p class="ph-sub">
-      A student-centered library built to inspire learning, discovery, and growth.
-    </p>
-  </div>
-</section>
+<!-- Mobile drawer -->
+<nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="services.html">Services</a>
+  <a href="policies.html">Policies</a>
+  <a href="about.html">About</a>
+</nav>
 
 <!-- STORY -->
 <section class="sec">
@@ -71,34 +87,37 @@
 </section>
 
 <!-- TEAM -->
-<section class="sec">
+<section class="sec2">
   <div class="wrap">
     <header class="sec-header center">
       <h2 class="sec-title">Our <em>Team</em></h2>
+      <p class="sec-desc">
+        The platform was designed with simplicity, accessibility, and user experience in mind. We chose this layout and design approach to make navigation more intuitive and efficient for students, allowing them to access resources, information, and features with minimal effort. <br><br>Throughout the development process, our team worked closely together to plan how the website would function, ensuring that every section would be easy to understand and navigate. By combining our ideas and experiences, we created a platform that not only serves its purpose but also provides a smooth and user-friendly experience for every student who uses it.
+      </p>
     </header>
 
     <div class="team-grid">
 
       <div class="team-card">
-        <img src="nore.JPG" class="team-img">
+        <img src="images/nore.JPG" class="team-img">
         <p class="team-name">Norella Franceska Belen</p>
         <p class="team-role">BLIS 2B G2</p>
       </div>
 
       <div class="team-card">
-        <img src="aji.jpg" class="team-img">
+        <img src="images/aji.jpg" class="team-img">
         <p class="team-name">Angela Joy Rivera</p>
         <p class="team-role">BLIS 2B G2</p>
       </div>
 
       <div class="team-card">
-        <img src="eca.jpg" class="team-img">
+        <img src="images/eca.jpg" class="team-img">
         <p class="team-name">Erhica De Guzman</p>
         <p class="team-role">BLIS 2B G2</p>
       </div>
 
       <div class="team-card">
-        <img src="gab.jpg" class="team-img">
+        <img src="images/gab.jpg" class="team-img">
         <p class="team-name">Eduardo Gabriel Flores</p>
         <p class="team-role">BLIS 2B G2</p>
       </div>
@@ -112,6 +131,9 @@
   <div class="wrap">
     <header class="sec-header center">
       <h2 class="sec-title">Our <em>Location</em></h2>
+      <p class="sec-desc">
+        GEAN Library is located along MacArthur Highway, Barangay Guinhawa, City of Malolos, Bulacan 3000, Philippines.
+      </p>
     </header>
 
     <div class="map-box">
@@ -128,7 +150,14 @@
 
 <!-- FOOTER -->
 <footer>
-  <p class="ft-copy">&copy; 2026 GEAN Library. All rights reserved.</p>
+  <span class="ft-brand">GEAN Library</span>
+  <span class="ft-copy">&copy; 2024 GEAN Library. All rights reserved.</span>
+  <nav class="ft-links" aria-label="Footer navigation">
+    <a href="collection.html">Collection</a>
+    <a href="services.html">Services</a>
+    <a href="policies.html">Policies</a>
+    <a href="about.html">About</a>
+  </nav>
 </footer>
 
 <script src="script.js"></script>

@@ -8,26 +8,52 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-brand">
+<!-- ══ SEARCH OVERLAY ════════════════════════════════════════ -->
+<div id="searchOverlay" class="search-overlay" role="dialog" aria-label="Search books">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span class="search-ico">⌕</span>
+      <input id="searchInput" type="text" placeholder="Search books, categories…" autocomplete="off" spellcheck="false">
+      <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search">✕</button>
+    </div>
+    <p class="search-meta">Press <kbd>Esc</kbd> to close &nbsp;·&nbsp; <kbd>Ctrl K</kbd> to open</p>
+    <div id="searchResults" role="listbox" aria-label="Search results"></div>
+  </div>
+</div>
+
+<!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand" aria-label="GEAN Library home">
     <span class="nav-brand-name">GEAN</span>
     <span class="nav-brand-sub">Library</span>
   </a>
 
-  <ul class="nav-links">
+  <ul class="nav-links" role="list">
     <li><a href="index.html">Home</a></li>
     <li><a href="collection.html">Collection</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="policies.html" class="active">Policies</a></li>
+    <li><a href="policies.html">Policies</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
+
+  <button id="navSearchBtn" class="nav-search-btn" aria-label="Open search">⌕</button>
+  <button id="navBurger" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<nav id="navDrawer" class="nav-drawer" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <a href="services.html">Services</a>
+  <a href="policies.html">Policies</a>
+  <a href="about.html">About</a>
 </nav>
 
 <!-- HERO -->
 <section class="page-hero">
   <div class="ph-inner">
-    <p class="ph-tag">Library Guidelines</p>
     <h1 class="ph-title">Library <em>Policies</em></h1>
     <p class="ph-sub">Everything you need to know about using GEAN Library responsibly and effectively.</p>
   </div>
@@ -129,7 +155,14 @@
 </section>
 
 <footer>
-  <p class="ft-copy">&copy; 2026 GEAN Library. All rights reserved.</p>
+  <span class="ft-brand">GEAN Library</span>
+  <span class="ft-copy">&copy; 2024 GEAN Library. All rights reserved.</span>
+  <nav class="ft-links" aria-label="Footer navigation">
+    <a href="collection.html">Collection</a>
+    <a href="services.html">Services</a>
+    <a href="policies.html">Policies</a>
+    <a href="about.html">About</a>
+  </nav>
 </footer>
 
 <script src="script.js"></script>
