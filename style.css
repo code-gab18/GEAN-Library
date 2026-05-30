@@ -473,38 +473,6 @@ body::after {
   background:var(--g-hero);
 }
 
-/* Grid bg */
-.hero-grid {
-  position:absolute; inset:0; pointer-events:none;
-  background-image:
-    linear-gradient(rgba(200,144,64,.035) 1px, transparent 1px),
-    linear-gradient(90deg,rgba(200,144,64,.035) 1px, transparent 1px);
-  background-size:64px 64px;
-  animation:gridDrift 40s linear infinite;
-}
-@keyframes gridDrift { from{background-position:0 0;} to{background-position:64px 64px;} }
-
-.hero-radial {
-  position:absolute;
-  top:-15%; right:-8%;
-  width:72vw; height:72vw;
-  background:radial-gradient(circle, rgba(200,144,64,.07) 0%, transparent 68%);
-  animation:breathe 9s ease-in-out infinite;
-  pointer-events:none;
-}
-.hero-radial-2 {
-  position:absolute;
-  bottom:-25%; left:-5%;
-  width:55vw; height:55vw;
-  background:radial-gradient(circle, rgba(20,80,140,.11) 0%, transparent 70%);
-  animation:breathe 12s ease-in-out infinite reverse;
-  pointer-events:none;
-}
-@keyframes breathe {
-  0%,100%{transform:scale(1);opacity:1;}
-  50%{transform:scale(1.1);opacity:.7;}
-}
-
 /* Content grid */
 .hero-inner {
   position:relative; z-index:2;
@@ -516,9 +484,10 @@ body::after {
   align-items:center;
   width:100%;
 }
+.hero-left{
+  padding-left: 90px;
 
-/* Left — text */
-
+}
 .hero-title {
   font-family:var(--font-d);
   font-size:clamp(3rem,5.8vw,5.4rem);
@@ -1224,6 +1193,7 @@ footer {
    RESPONSIVE
    ═══════════════════════════════════════════════════════════════ */
 @media(max-width:1200px) {
+  .hero-left {padding-right: 100px;}
   .cat-grid { grid-template-columns:repeat(3,1fr); }
   .books-grid { grid-template-columns:repeat(3,1fr); }
   .book-grid-4 { grid-template-columns:repeat(3,1fr); }
